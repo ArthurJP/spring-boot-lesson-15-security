@@ -47,6 +47,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .passwordParameter( "pwd" )
                 .loginPage( "/login" )
                 .loginProcessingUrl( "/loginAction" )
+                .defaultSuccessUrl( "/index" )
                 .failureUrl( "/error" )
                 .permitAll()
                 .and().logout().permitAll();
