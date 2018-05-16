@@ -5,11 +5,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
-import org.springframework.security.web.header.writers.frameoptions.AllowFromStrategy;
-import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter;
-import org.springframework.security.web.util.matcher.RequestMatcher;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * TODO:
@@ -60,7 +55,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser( "jp" ).password( "1234" ).roles( "ADMIN " )
+        auth.inMemoryAuthentication().withUser( "jp" ).password( "1234" ).roles( "ADMIN" )
                 .and().withUser( "刘德华" ).password( "123456" ).roles( "USER" );
     }
 }
